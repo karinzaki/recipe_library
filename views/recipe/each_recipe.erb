@@ -1,0 +1,37 @@
+<header class="edit"><a href="/recipe/<%= each_recipe["id"] %>/edit">Edit</a></header>
+
+<h3 class="each_title"><%= each_recipe["meal_item"] %></h3>
+
+<section class="display_each_recipe">
+   <div class="calories">Calorie Count: <%= each_recipe["calories"] %>cals</div>
+   <div class="stars">
+      <li>
+         <a href="#"><i class="fa-star"></i></a>
+         <a href="#"><i class="fa-star"></i></a>
+         <a href="#"><i class="fa-star"></i></a>
+         <a href="#"><i class="fa-star"></i></a>
+         <a href="#"><i class="fa-star-o"></i></a>
+      </li>
+   </div>
+   <div class="ingredients_array">Ingredients: <%= each_recipe["ingredients"].split(',').join("\n") %></div>
+   <div class="recipe_text">Recipe: <%= each_recipe["recipe"] %></div>
+   <div class="category">Category: <%= each_recipe["category"] %></div>
+   <img src="<%= each_recipe["image_url"]%>" alt="">
+</section>
+
+<br />
+
+<form action="/recipe/<%= each_recipe["id"]%>" method="POST">
+  <div class="popup" role="alert">
+    <div class="popup-container">
+       <p>Are you sure you want to delete this recipe?</p>
+       <ul class="buttons">
+        <input type="hidden" id="delete" name="_method" value="DELETE">
+        <li id="delete"><a href="#0"><input type="submit" value="Yes"></input></a></li>
+        <li><a href="#0"><input type="submit" value="No"></input></a></li>
+       </ul>
+       <a href="#0" class="popup-close img-replace">Close</a>
+    </div> 
+ </div> 
+</form>
+
