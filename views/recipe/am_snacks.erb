@@ -1,16 +1,18 @@
 <header class="create">
     <nav class="create_list">
         <ul>
+            <li><a href="/">Homepage</a></li>
             <li><a href="/recipe/create">Add Recipe</a></li>
         </ul>
     </nav>
 </header>
 
-<section class = "all-recipes"> 
-    <% recipes.each do |meal| %>
-    <section class = "meal-item">
-        <section class = "name">
-            <h3 class="text"><%= meal["meal_item"]%></h3>
+
+<section class = "all_am_snacks"> 
+    <% am_snacks.each do |meal| %>
+    <section class = "am_snack-item">
+        <section class = "am_snack_name">
+            <h3 class="am_text"><%= meal["meal_item"]%></h3>
         </section>
         <a href="/recipe/<%= meal["id"] %>"><img src="<%= meal['image_url']%>" alt=""></a>
     </section>

@@ -1,0 +1,20 @@
+<header class="create">
+    <nav class="create_list">
+        <ul>
+            <li><a href="/">Homepage</a></li>
+            <li><a href="/recipe/create">Add Recipe</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class = "all_breakfasts"> 
+    <% breakfasts.each do |breakfast| %>
+    <section class = "breakfast-item">
+        <section class = "breakfast_name">
+            <h3 class="breakfast_text"><%= breakfast["meal_item"]%></h3>
+        </section>
+        <a href="/recipe/<%= breakfast["id"] %>"><img src="<%= breakfast['image_url']%>" alt=""></a>
+    </section>
+    <% end %>
+</section>
+

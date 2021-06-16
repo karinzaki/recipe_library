@@ -68,6 +68,41 @@ put '/recipe/:id' do |id|
   redirect "/recipe/#{id}"
 end
 
+get '/breakfasts' do
+
+  breakfast_recipes = breakfast_recipes()
+
+  erb :'/recipe/breakfast', locals: { breakfasts: breakfast_recipes }
+end
+
+get '/am_snacks' do
+
+  am_snack_recipes = am_snack_recipes()
+
+  erb :'/recipe/am_snacks', locals: { am_snacks: am_snack_recipes }
+end
+
+
+get '/lunches' do
+
+  lunches_recipes = lunch_recipes()
+
+  erb :'/recipe/lunch', locals: { lunches: lunches_recipes }
+end
+
+get '/pm_snacks' do
+
+  pm_snack_recipes = pm_snack_recipes()
+
+  erb :'/recipe/pm_snacks', locals: { pm_snacks: pm_snack_recipes }
+end
+
+get '/dinners' do
+
+  dinners_recipes = dinner_recipes()
+
+  erb :'/recipe/dinner', locals: { dinners: dinners_recipes }
+end
 
 # Delete individual recipe
 delete '/recipe/:id' do |id|

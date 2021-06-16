@@ -1,10 +1,9 @@
-<html>
-  <head>
-      <link rel="stylesheet" href="/stylesheets/main.css">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <header class="header">
-        <marquee><h1>Recipe Library</h1></marquee>
+    <marquee><h1>Recipe Library</h1></marquee>
+    <header class="header">
         <% if is_logged_in? %>
             Welcome!
             <form action="/sessions" method="POST">
@@ -15,17 +14,12 @@
             <a href="/user">Sign-Up</a>
             <a href="/login">Login</a>
         <% end %>
-
-        <nav>
-            <a href="/">Homepage</a>
-        </nav>
-      </header>
-  </head>
-  <body>
-      <main>
-          <%= yield %>
-      </main>
-  </body>
+    </header>
+</head>
+<body>
+    <main>
+        <%= yield %>
+    </main>
+</body>
   
-  </html>
 

@@ -13,3 +13,22 @@ end
 # hacking sql
 # "INSERT INTO food(name, image_url, price) VALUES('f', 'f');UPDATE food SET name='HAXX';SELECT('1'), 8.50);" --- check injection.sql
 
+def breakfast_recipes()
+  run_sql("SELECT * FROM meal_planning WHERE category = 'Breakfast';")
+end
+
+def am_snack_recipes()
+  run_sql("SELECT * FROM meal_planning WHERE category = 'AM Snack';")
+end
+
+def lunch_recipes()
+  run_sql("SELECT * FROM meal_planning WHERE category = 'Lunch';")
+end
+
+def pm_snack_recipes()
+  run_sql("SELECT * FROM meal_planning WHERE category = 'PM Snack';")
+end
+
+def dinner_recipes()
+  run_sql("SELECT * FROM meal_planning WHERE category = 'Dinner';")
+end
