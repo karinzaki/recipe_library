@@ -14,7 +14,7 @@
   # BONUS - display the total calorie intake under each day in the week meal planning page
 
 require 'sinatra'
-require 'sinatra/reloader'
+require 'sinatra/reloader' if development?
 require 'pg'
 
 require_relative 'db/db'
