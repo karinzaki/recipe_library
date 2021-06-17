@@ -6,7 +6,7 @@ def is_logged_in?
   end
 end
 
-def current_user()
+def current_user
   if is_logged_in?
     return find_user_by_id( session[:user_id] )
   else

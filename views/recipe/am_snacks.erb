@@ -1,12 +1,27 @@
 <header class="create">
     <nav class="create_list">
-        <ul>
-            <li><a href="/">Homepage</a></li>
-            <li><a href="/recipe/create">Add Recipe</a></li>
-        </ul>
+        <% if is_logged_in? %>
+            <ul>
+                <li><a href="/" class="nav_text">Homepage</a></li>
+                <li><a href="/recipe/create" class="nav_text">Add Recipe</a></li>
+            </ul>
+            <div class="logins">
+                <form action="/sessions" method="POST">
+                   <input type="hidden" name="_method" value="DELETE">
+                   <input type="submit" class="nav_text" value="Logout"/>
+                </form>
+             </div>
+        <% else %>
+            <ul>
+                <li><a href="/" class="nav_text">Homepage</a></li>
+            </ul>
+            <div class="logins">
+                <a href="/user" class="nav_text">Sign-Up</a>
+                <a href="/login" class="nav_text">Login</a>
+            </div>
+        <% end %>
     </nav>
 </header>
-
 
 <section class = "all_am_snacks"> 
     <% am_snacks.each do |meal| %>

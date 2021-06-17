@@ -23,7 +23,7 @@ def find_user_by_email(email)
   end
 end
 
-def find_user_by_id(id)
+def find_user_by_id id 
 
   params = [id]
   sql_query = "SELECT * FROM users WHERE id = $1;"

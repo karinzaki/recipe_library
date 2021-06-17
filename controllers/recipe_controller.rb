@@ -7,7 +7,7 @@ end
 
 # to display the data i.e. create form
 get '/recipe/create' do
-  erb :'/recipe/create', locals: { edit: false, recipes: {}}
+  erb :'/recipe/create'
 end 
 
 # to post the data to the server

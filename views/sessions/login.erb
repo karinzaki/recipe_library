@@ -1,16 +1,26 @@
-<h1>Login</h1>
+<h1 class="forms_title">Login</h1>
+
+<div class="forms_homepg">
+  <ul>
+    <li><a href="/" class="nav_text">Homepage</a></li>
+  </ul>
+</div>
+
 <%= error_message %>
-<form action="/sessions" method="POST">
-  <label for="email">
-    Email:
-  </label>
-  <input type="text" name="email" />
 
-  <label for="password">
-    Password:
-  </label>
-  <input type="password" name="password" />
+<div class="forms">
+  <form action="/sessions" method="POST">
+    <label for="email">
+      Email:
+    </label>
+    <input type="text" name="email" />
 
-  <input type="submit" value="Login" />
-</form>
+    <label for="password">
+      Password:
+    </label>
+    <input type="password" name="password" />
+
+    <input type="submit" value="Login" />
+  </form>
+</div>
 

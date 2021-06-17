@@ -1,10 +1,12 @@
 <form action="/recipe/<%= recipe["id"] %>" method="POST">
   <input type="hidden" name="_method" value="PUT" />
 
-  <label for="meal_item">
-    Meal Item:
-  </label>
-  <input name="meal_item" value="<%= recipe["meal_item"]%>" required>
+  <div class="meal-item">
+    <label for="meal_item">
+      Meal Item:
+    </label>
+    <input name="meal_item" value="<%= recipe["meal_item]%>" required>
+  </div>
 
   <section class="category">
     <label for="category">Category:</label>
@@ -18,28 +20,39 @@
     </select>
   </section>  
 
-  <label for="calories">
-    Calorie Count:
-  </label>
-  <input name="calories" value="<%= recipe["calories"]%>" required>
+  <div class="calories">
+    <label for="calories">
+      Calorie Count:
+    </label>
+    <input name="calories" value="<%= recipe["calories"]%>" required>
+  </div>  
 
-  <label for="ingredients">
-    Ingredients:
-  </label>
-  <textarea name="ingredients" id="ingredients" cols="30" rows="10" placeholder="List, your, ingredients, here" required><%= recipe["ingredients"]%></textarea>
+  <div class="image-url">
+    <label for="image_url">
+      Image URL:
+    </label>
+    <input name="image_url" value="<%= recipe["image_url"]%>" required>
+  </div>  
 
-  <label for="recipe">
-    Recipe:
-  </label>
-  <textarea name="recipe" id="recipe" cols="30" rows="10" placeholder="1. Write you recipe instructions here.
+  <div class="ingredients">
+    <label for="ingredients">
+      Ingredients:
+    </label>
+    <textarea name="ingredients" cols="30" rows="10" placeholder="List, your, ingredients, here" required><%= recipe["ingredients"]%></textarea>
+  </div>
+
+  <div class="recipe">
+    <label for="recipe">
+      Recipe:
+    </label>
+    <textarea name="recipe" cols="30" rows="10" placeholder="1. Write you recipe instructions here.
 2. In numbered list formatting." required><%= recipe["recipe"]%></textarea>
+  </div>
 
-  <label for="image_url">
-    Image URL:
-  </label>
-  <input name="image_url" value="<%= recipe["image_url"]%>" required>
-
-  <input type="submit" value="Update Recipe" />
+  <div class="button">
+    <input type="submit" class="nav_text2" value="Update Recipe" />
+    <a href="/" class="nav_text2" role="button">Cancel</a>
+  </div>
 </form>
 
 

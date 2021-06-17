@@ -1,11 +1,13 @@
 <% action = "/recipe/create" %>
 
-<form action="<%= action %>" method="POST">
+<form action="<%= action %>" method="POST" class="create_page">
     
-  <label for="meal_item">
-    Meal Item:
-  </label>
-  <input name="meal_item" value="<%= recipes["name"]%>" required>
+  <div class="meal-item">
+    <label for="meal_item">
+      Meal Item:
+    </label>
+    <input name="meal_item" value="<%= recipes["meal_item"]%>" required>
+  </div>
 
   <section class="category">
     <label for="category">Category:</label>
@@ -19,29 +21,37 @@
     </select>
   </section>  
 
-  <label for="calories">
-    Calorie Count:
-  </label>
-  <input name="calories" value="<%= recipes["calories"]%>" required>
+  <div class="calories">
+    <label for="calories">
+      Calorie Count:
+    </label>
+    <input name="calories" value="<%= recipes["calories"]%>" required>
+  </div>  
 
-  <label for="ingredients">
-    Ingredients:
-  </label>
-  <textarea name="ingredients" id="ingredients" cols="30" rows="10" placeholder="List, your, ingredients, here" required></textarea>
+  <div class="image-url">
+    <label for="image_url">
+      Image URL:
+    </label>
+    <input name="image_url" value="<%= recipes["image_url"]%>" required>
+  </div>  
+  
+  <div class="ingredients">
+    <label for="ingredients" class="label">
+      Ingredients:
+    </label>
+    <textarea name="ingredients" cols="30" rows="10" placeholder="List, your, ingredients, here" required></textarea>
+  </div>
 
-  <label for="recipe">
-    Recipe:
-  </label>
-  <textarea name="recipe" id="recipe" cols="30" rows="10" placeholder="1. Write you recipe instructions here.
+  <div class="recipe">
+    <label for="recipe" class="label">
+      Recipe:
+    </label>
+    <textarea name="recipe" cols="30" rows="10" placeholder="1. Write you recipe instructions here.
 2. In numbered list formatting." required></textarea>
+  </div>
 
-  <label for="image_url">
-    Image URL:
-  </label>
-  <input name="image_url" value="<%= recipes["image_url"]%>" required>
-
-  <span class="buttons">
-    <input type="submit" value="Add Recipe" />
-    <a href="/" class="cancel_bttn" role="button">Cancel</a>
-  </span>
+  <div class="button">
+    <input type="submit" class="nav_text2" value="Add Recipe" />
+    <a href="/" class="nav_text2" role="button">Cancel</a>
+  </div>
 </form>

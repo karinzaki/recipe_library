@@ -17,6 +17,8 @@ require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'pg'
 
+enable :sessions
+
 require_relative 'db/db'
 
 require_relative 'models/recipes'
