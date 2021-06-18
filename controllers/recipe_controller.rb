@@ -7,7 +7,7 @@ end
 
 # to display the data i.e. create form
 get '/recipe/create' do
-  erb :'/recipe/create'
+  erb :'/recipe/create', locals: { recipes: {} }
 end 
 
 # to post the data to the server
@@ -42,10 +42,9 @@ end
 get '/recipe/:id/edit' do |id|
   # look up food by id and pass it to the template
   results = run_sql("SELECT * FROM meal_planning WHERE id = $1;", [id])
-
-  erb :'/recipe/edit', locals: { recipe: results[0] }
+  
+  erb :'/recipe/edit', locals: { recipes: results[0] }
 end
-
 
 # Update individual recipe
 put '/recipe/:id' do |id|

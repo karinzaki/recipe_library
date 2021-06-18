@@ -6,6 +6,10 @@
             <li id="grid"><a href="/recipe/<%= each_recipe["id"] %>/edit" class="nav_text">Edit</a></li>
          </ul>
          <div class="logins">
+            <form action="/recipe/<%= each_recipe["id"] %>" method="POST">
+               <input type="hidden" name="_method" value="DELETE" />
+               <input type="submit" class="nav_text" value="Delete Recipe" />
+            </form>
             <form action="/sessions" method="POST">
                <input type="hidden" name="_method" value="DELETE">
                <input type="submit" class="nav_text" value="Logout"/>
@@ -27,8 +31,8 @@
    <h3 class="each_title"><%= each_recipe["meal_item"] %></h3>
 
    <div class="details">
-      <div class="calories">Calorie Count: <%= each_recipe["calories"] %>cals</div>
-      <div class="category">Category: 
+      <div class="calories2">Calorie Count: <%= each_recipe["calories"] %>cals</div>
+      <div class="category2">Category: 
          <% if each_recipe["category"] == "Breakfast" %>
             <a href="/breakfasts"><%= each_recipe["category"] %></a>
          <% elsif each_recipe["category"] == "AM Snack" %>
@@ -44,13 +48,13 @@
    </div>
    <div class="recipe_content">
       <div class="content">
-         <div class="ingredients_array">Ingredients: <%= each_recipe["ingredients"].split(',').join("\n") %></div>
-         <div class="recipe_text">Recipe: <%= each_recipe["recipe"] %></div>
+         <div class="ingredients_array">Ingredients: <span class="ing_rec"> - <%= each_recipe["ingredients"].split(',').join("\n -") %></span></div>
+         <div class="recipe_text">Recipe: <span class="ing_rec"><%= each_recipe["recipe"] %></span></div>
       </div>
       <div class="each_img">
          <img src="<%= each_recipe["image_url"]%>" alt="">
       </div>
    </div>
 
-</main>
+  
 

@@ -70,11 +70,10 @@
 }
 
 
-
 /* index and each category page formatting */
 .meal-item, .breakfast-item, .am_snack-item, .lunch-item, .pm_snack-item, .dinner-item {
   position: relative;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .meal-item img, .breakfast-item img, .am_snack-item img, .lunch-item img, .pm_snack-item img, .dinner-item img {
@@ -129,6 +128,18 @@
   gap: 20px;
 }
 
+.ing_rec::before {
+  content: '\A\A';
+  white-space: pre;
+}
+
+.ing_rec {
+  font-weight: 20x;
+  font-size: 13px;
+  opacity: 10;
+  color: rgb(63, 63, 63);
+}
+
 .top_nav ul, .logins {
   grid-column-start: 2;
   grid-column-end: 3;
@@ -152,10 +163,10 @@
 
 .each_title {
   grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
-  color: black;
+  color: #3b3023;
   text-align: left;
   font-weight: 300;
   font-size: 26px;
@@ -198,35 +209,6 @@
 }
 
 
-/* each_recipe footer */
-/* .popup {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: 4;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s 0s, visibility 0s 0.3s;
-}
-
-.popup.is-visible {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.3s 0s, visibility 0s 0s;
-}
-
-.popup-message {
-  transform: translateY(-40px);
-  transition-property: transform;
-  transition-duration: 0.3s;
-}
-
-.is-visible .popup-container {
-  transform: translateY(0);
-} */
-
-
-
 /* create and edit page */
 .create_page {
   margin: 10px 30px;
@@ -247,7 +229,7 @@
   margin-top: 12px;
 }
 
-.category, .calories, .meal-item, .image-url, .ingredients, .recipe {
+.category, .calories, .meal-item2, .image-url, .ingredients, .recipe {
   display: grid;
   grid-template-columns: 25% 25% 25% 25% 25%;
   text-align: center;
