@@ -3,7 +3,7 @@
       <% if is_logged_in? %>
          <ul>
             <li id="grid"><a href="/" class="nav_text">Homepage</a></li>
-            <li id="grid"><a href="/recipe/<%= each_recipe["id"] %>/edit" class="nav_text">Edit</a></li>
+            <li id="grid"><a href="/recipe/<%= each_recipe['id'] %>/edit" class="nav_text">Edit</a></li>
          </ul>
          <div class="logins">
             <form action="/recipe/<%= each_recipe["id"] %>" method="POST">
@@ -34,25 +34,25 @@
       <div class="calories2">Calorie Count: <%= each_recipe["calories"] %>cals</div>
       <div class="category2">Category: 
          <% if each_recipe["category"] == "Breakfast" %>
-            <a href="/breakfasts"><%= each_recipe["category"] %></a>
+            <a href="/breakfasts"><%= each_recipe['category'] %></a>
          <% elsif each_recipe["category"] == "AM Snack" %>
-            <a href="/am_snacks"><%= each_recipe["category"] %></a>
+            <a href="/am_snacks"><%= each_recipe['category'] %></a>
          <% elsif each_recipe["category"] == "Lunch" %>
-            <a href="/lunches"><%= each_recipe["category"] %></a>
+            <a href="/lunches"><%= each_recipe['category'] %></a>
          <% elsif each_recipe["category"] == "PM Snack" %>
-            <a href="/pm_snacks"><%= each_recipe["category"] %></a>
+            <a href="/pm_snacks"><%= each_recipe['category'] %></a>
          <% elsif each_recipe["category"] == "Dinner" %>
-            <a href="/dinners"><%= each_recipe["category"] %></a>
+            <a href="/dinners"><%= each_recipe['category'] %></a>
          <% end %>
       </div>
    </div>
    <div class="recipe_content">
       <div class="content">
          <div class="ingredients_array">Ingredients: <span class="ing_rec"> - <%= each_recipe["ingredients"].split(',').join("\n -") %></span></div>
-         <div class="recipe_text">Recipe: <span class="ing_rec"><%= each_recipe["recipe"] %></span></div>
+         <div class="recipe_text">Recipe: <span class="ing_rec"><%= each_recipe['recipe'] %></span></div>
       </div>
       <div class="each_img">
-         <img src="<%= each_recipe["image_url"]%>" alt="">
+         <img src="<%= each_recipe['image_url']%>" alt="">
       </div>
    </div>
 

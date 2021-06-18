@@ -27,9 +27,9 @@
     <% dinners.each do |meal| %>
     <section class = "dinner-item">
         <section class = "dinner_name">
-            <h3 class="dinner_text"><%= meal["meal_item"]%></h3>
+            <h3 class="dinner_text"><%= meal['meal_item']%></h3>
         </section>
-        <a href="/recipe/<%= meal["id"] %>"><img src="<%= meal['image_url']%>" alt=""></a>
+        <a href="/recipe/<%= meal['id'] %>"><img src="<%= meal['image_url']%>" alt=""></a>
     </section>
     <% end %>
 </section>
