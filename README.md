@@ -29,7 +29,7 @@ A recipe library app where the user is able to access each recipe broken down in
   > Manipulating CSS to better the user experience
 
 ## :camera_flash: Screenshot of Interface
-![](https://github.com/karinzaki/tictactoe/blob/b1d97c35a66e6f8f093a08317eaf6330d9488a62/tictactoe-screenshot.png)
+![](https://github.com/karinzaki/recipe_library/blob/master/interface_screenshot.jpg)
 
 ## :compass: Future Updates
 Add confirmation box for the Delete function
